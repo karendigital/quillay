@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El Quillay de Pirque | Piscina y terraza para familias y celebraciones</title>
+<meta name="description" content="El Quillay de Pirque: piscina y terraza equipada en un espacio privado para hasta 20 personas. Tardes en familia, bautismos y cumpleaños. Cotiza por WhatsApp.">
+<meta property="og:title" content="El Quillay de Pirque">
+<meta property="og:description" content="Piscina y terraza equipada en Pirque para celebrar en familia, hasta 20 personas.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/portada.jpg">
+<meta property="og:locale" content="es_CL">
+<meta name="theme-color" content="#2f6b3f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%232f6b3f'/%3E%3Cg fill='none' stroke='%23ffc94d' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 27V15'/%3E%3Cpath d='M16 15c-6 0-8-4-8-8 6 0 8 4 8 8z'/%3E%3Cpath d='M16 19c5 0 8-3 8-8-5 0-8 3-8 8z'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preload" as="image" href="assets/img/portada.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"El Quillay de Pirque","description":"Arriendo de piscina y terraza equipada en Pirque para hasta 20 personas: tardes en familia, bautismos y cumpleaños.","image":"assets/img/portada.jpg","telephone":"+56993979291","priceRange":"$8.000 por persona","address":{"@type":"PostalAddress","addressLocality":"Pirque","addressRegion":"Región Metropolitana","addressCountry":"CL"},"openingHours":"Mo-Su 10:00-20:00","sameAs":["https://www.instagram.com/elquillaydepirque/"]}
+</script>
+<script>document.documentElement.className='js'</script>
+<style>
+/* ========== VARIABLES: cambia aquí colores y tipografías ========== */
+:root{
+  --crema:#fff8ec;
+  --menta:#e6f6f1;
+  --blanco:#ffffff;
+  --verde:#2f6b3f;
+  --verde-osc:#1f4a2c;
+  --agua:#3fc1d3;
+  --agua-clara:#9be0ea;
+  --sol:#ffc94d;
+  --coral:#f2815e;
+  --carbon:#2b2b28;
+  --gris:#5a5a55;
+  --titulo:ui-rounded,"SF Pro Rounded","Nunito","Quicksand","Varela Round","Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;
+  --texto:"Inter","Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
+  --radio:28px;
+  --sombra:0 20px 40px -20px rgba(31,74,44,.45);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:96px;overflow-x:clip}
+body{font-family:var(--texto);color:var(--carbon);background:var(--crema);line-height:1.65;font-size:17px;overflow-x:clip;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+h1,h2,h3,h4{font-family:var(--titulo);font-weight:800;line-height:1.15;color:var(--verde-osc)}
+h1{font-size:clamp(2.3rem,5.6vw,4rem)}
+h2{font-size:clamp(1.9rem,4vw,2.8rem)}
+h3{font-size:1.3rem}
+p{color:var(--gris)}
+.contenedor{width:min(1160px,100% - 2.5rem);margin-inline:auto;position:relative;z-index:2}
+section{padding:clamp(4rem,9vw,6.5rem) 0;position:relative}
+.con-olas{padding-bottom:calc(clamp(4rem,9vw,6.5rem) + 70px)}
+.etiqueta{display:inline-block;font-family:var(--titulo);font-weight:800;font-size:.9rem;color:var(--verde);background:var(--sol);padding:.35rem 1rem;border-radius:999px;margin-bottom:1rem;transform:rotate(-2deg)}
+.intro{max-width:640px;margin:0 auto 3rem;text-align:center}
+.intro p{margin-top:1rem;font-size:1.08rem}
+
+/* ========== BARRA DE PROGRESO ========== */
+#progreso{position:fixed;top:0;left:0;right:0;height:5px;z-index:100;background:linear-gradient(90deg,var(--agua),var(--sol),var(--coral));transform:scaleX(0);transform-origin:left}
+#confeti{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:90}
+
+/* ========== BOTONES ========== */
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:.55rem;padding:1rem 1.7rem;border-radius:999px;font-family:var(--titulo);font-weight:800;font-size:1rem;border:2px solid transparent;cursor:pointer;transform:translate(var(--bx,0px),var(--by,0px));transition:transform .2s ease-out,background .25s,color .25s,box-shadow .25s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-verde{background:var(--verde);color:#fff;box-shadow:0 8px 0 -2px var(--verde-osc),var(--sombra)}
+.btn-verde:hover{background:#37804a;box-shadow:0 5px 0 -2px var(--verde-osc),var(--sombra)}
+.btn-verde::before{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);animation:brillo 3.5s ease-in-out infinite}
+.btn-linea{border-color:var(--verde);color:var(--verde);background:rgba(255,255,255,.7)}
+.btn-linea:hover{background:var(--verde);color:#fff}
+.btn-sol{background:var(--sol);color:var(--verde-osc);box-shadow:0 8px 0 -2px #d99f1c}
+.btn-sol:hover{background:#ffd56e}
+.btn-borde-claro{border-color:rgba(255,255,255,.7);color:#fff}
+.btn-borde-claro:hover{background:rgba(255,255,255,.15)}
+.btn-chico{padding:.7rem 1.2rem;font-size:.92rem}
+@keyframes brillo{0%,55%{left:-70%}100%{left:140%}}
+
+/* ========== NAVBAR ========== */
+.nav{position:fixed;top:14px;left:0;right:0;z-index:50;transition:top .3s}
+.nav-int{display:flex;align-items:center;justify-content:space-between;height:66px;gap:1rem;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:999px;padding:0 .7rem 0 1.4rem;box-shadow:0 10px 30px -18px rgba(31,74,44,.5);transition:box-shadow .3s,background .3s}
+.nav.pegada{top:8px}
+.nav.pegada .nav-int{background:rgba(255,255,255,.96);box-shadow:0 14px 34px -16px rgba(31,74,44,.6)}
+.marca{display:flex;align-items:center;gap:.55rem;font-family:var(--titulo);font-size:1.25rem;font-weight:800;color:var(--verde-osc);white-space:nowrap}
+.marca svg{width:32px;height:32px;color:var(--verde);transform-origin:50% 100%;animation:mece 4s ease-in-out infinite}
+.nav-links{display:flex;align-items:center;gap:1.6rem}
+.enlace{font-family:var(--titulo);font-weight:700;font-size:.97rem;position:relative;padding:.3rem 0}
+.enlace::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:4px;border-radius:4px;background:var(--sol);transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.2,1.4,.4,1)}
+.enlace:hover::after{transform:scaleX(1)}
+.menu-btn{display:none;background:var(--menta);border:0;width:46px;height:46px;border-radius:50%;cursor:pointer;color:var(--verde-osc)}
+.menu-btn svg{width:24px;height:24px}
+
+/* ========== HERO ========== */
+.hero{padding:clamp(8rem,13vw,10rem) 0 230px;background:linear-gradient(180deg,#bfeaf7 0%,#e3f6f8 45%,var(--crema) 100%);overflow:hidden}
+#burbujas{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.capa{position:absolute;transform:translate3d(calc(var(--mx,0)*var(--d,10)*1px),calc(var(--my,0)*var(--d,10)*1px),0);transition:transform .5s ease-out;will-change:transform}
+.sol{top:90px;right:7%;width:clamp(90px,13vw,170px);aspect-ratio:1;--d:-26}
+.sol i{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 35% 35%,#ffe9a6,var(--sol));box-shadow:0 0 60px 20px rgba(255,201,77,.45);animation:late 4s ease-in-out infinite}
+.sol::before{content:"";position:absolute;inset:-45%;border-radius:50%;background:repeating-conic-gradient(rgba(255,201,77,.7) 0 8deg,transparent 8deg 30deg);-webkit-mask:radial-gradient(circle,transparent 40%,#000 42%,#000 58%,transparent 68%);mask:radial-gradient(circle,transparent 40%,#000 42%,#000 58%,transparent 68%);animation:gira 28s linear infinite}
+.nube{--d:14;width:150px;height:46px}
+.nube b{position:absolute;inset:0;background:#fff;border-radius:999px;opacity:.9;animation:viaja var(--t,40s) linear infinite;animation-delay:var(--dl,0s)}
+.nube b::before,.nube b::after{content:"";position:absolute;background:#fff;border-radius:50%}
+.nube b::before{width:62px;height:62px;left:22px;top:-30px}
+.nube b::after{width:46px;height:46px;right:26px;top:-20px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.pal{display:inline-block;animation:salta .8s cubic-bezier(.2,1.6,.4,1) both;animation-delay:calc(var(--i,0)*90ms + .15s)}
+.marca-h{color:var(--verde);background:linear-gradient(var(--sol),var(--sol)) no-repeat 0 92%/0 .26em;animation:subraya 1s ease-out 1.3s forwards;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.hero .sub{font-size:1.15rem;margin:1.4rem 0 2rem;max-width:540px;color:#3f4a44}
+.acciones{display:flex;flex-wrap:wrap;gap:1rem}
+.datos{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2.2rem}
+.dato{font-family:var(--titulo);font-weight:700;font-size:.9rem;padding:.5rem 1rem;border-radius:999px;background:#fff;color:var(--verde-osc);box-shadow:0 6px 14px -8px rgba(31,74,44,.5);animation:flota 4s ease-in-out infinite;animation-delay:calc(var(--n,0)*-1.2s)}
+.hero-foto{position:relative;max-width:460px;margin-inline:auto;width:100%}
+.hero-foto .ph{aspect-ratio:1/1;border:8px solid #fff;animation:gota 10s ease-in-out infinite}
+.sello{position:absolute;left:-14px;bottom:8%;width:126px;height:126px;border-radius:50%;background:var(--coral);color:#fff;display:grid;place-items:center;text-align:center;font-family:var(--titulo);font-weight:800;line-height:1.05;box-shadow:var(--sombra);animation:balancea 3.5s ease-in-out infinite}
+.sello strong{display:block;font-size:2.5rem}
+.sello span{font-size:.82rem}
+.piscina{position:absolute;left:0;right:0;bottom:0;height:190px;z-index:1;pointer-events:none}
+.ola{position:absolute;left:0;bottom:0;width:200%;height:100%;animation:desliza var(--t,12s) linear infinite}
+.piscina .ola.a{fill:var(--agua-clara);height:150px;--t:16s}
+.piscina .ola.b{fill:var(--agua);height:120px;--t:11s;animation-direction:reverse}
+.piscina .ola.c{fill:var(--crema);height:60px;--t:8s}
+.arbol{bottom:120px;width:clamp(90px,12vw,170px);--d:8}
+.arbol svg{width:100%;transform-origin:50% 100%;animation:mece 5s ease-in-out infinite}
+.flotador{position:absolute;left:12%;bottom:62px;width:92px;animation:boya 4.5s ease-in-out infinite}
+.pelota{position:absolute;right:16%;bottom:70px;width:64px;height:64px;border-radius:50%;background:conic-gradient(var(--coral) 0 60deg,#fff 60deg 120deg,var(--sol) 120deg 180deg,#fff 180deg 240deg,var(--agua) 240deg 300deg,#fff 300deg);box-shadow:inset -8px -8px 14px rgba(0,0,0,.14);animation:rebota 2.4s ease-in-out infinite}
+.patito{position:absolute;left:48%;bottom:66px;font-size:2.6rem;animation:boya 3.6s ease-in-out infinite reverse}
+
+/* ========== FOTOS ========== */
+.ph{position:relative;overflow:hidden;border-radius:var(--radio);background:linear-gradient(160deg,#bfe6c0,#8fd0c7 45%,#6fc3d6);display:flex;align-items:flex-end;box-shadow:var(--sombra)}
+.ph.b{background:linear-gradient(200deg,#ffe2a3,#ffc08f 50%,#f59b85)}
+.ph.c{background:linear-gradient(150deg,#a8e6ef,#63c9d9 50%,#58b98a)}
+.ph::after{content:attr(data-foto);position:relative;margin:1rem;font-family:var(--titulo);font-weight:700;font-size:.78rem;background:rgba(255,255,255,.9);color:var(--verde-osc);padding:.35rem .8rem;border-radius:999px}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph:has(img)::after{display:none}
+
+/* ========== TARIFAS Y GALERÍA ========== */
+.precios{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:2.2rem}
+.precio{background:#fff;border-radius:26px;padding:1.5rem 1.2rem;text-align:center;box-shadow:0 14px 30px -22px rgba(31,74,44,.6);transition:transform .35s cubic-bezier(.2,1.5,.4,1),box-shadow .3s}
+.precio:hover{transform:translateY(-8px) rotate(-1.2deg);box-shadow:0 24px 40px -24px rgba(31,74,44,.7)}
+.precio:hover .emoji{animation:rebota .7s ease-in-out}
+.precio .emoji{margin:0 auto .7rem}
+.precio strong{display:block;font-family:var(--titulo);font-weight:800;font-size:1.5rem;color:var(--verde-osc);line-height:1.2}
+.precio h3{font-size:1.02rem;margin-bottom:.3rem;color:var(--verde)}
+.precio span{display:block;font-size:.92rem;color:var(--gris);margin-top:.35rem}
+.aviso{margin-top:1.8rem;background:var(--sol);color:var(--verde-osc);border-radius:24px;padding:1.2rem 1.5rem;font-family:var(--titulo);font-weight:700;text-align:center;box-shadow:var(--sombra);transform:rotate(-.6deg)}
+.aviso em{display:block;font-style:normal;font-weight:600;font-size:.92rem;margin-top:.3rem;color:#5c4411}
+.galeria{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.6rem}
+.galeria .ph{aspect-ratio:4/3;border:5px solid #fff;transition:transform .4s cubic-bezier(.2,1.4,.4,1)}
+.galeria .ph:hover{transform:scale(1.06) rotate(1.2deg)}
+@media (max-width:920px){.precios,.galeria{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.precios{grid-template-columns:1fr}}
+
+/* ========== CINTA ========== */
+.cinta{background:var(--verde);color:#fff;overflow:hidden;padding:.9rem 0;transform:rotate(-1.2deg) scale(1.03);position:relative;z-index:3;box-shadow:var(--sombra)}
+.cinta div{display:flex;width:max-content;animation:desliza 26s linear infinite}
+.cinta span{font-family:var(--titulo);font-weight:800;font-size:1.1rem;padding:0 1.4rem;white-space:nowrap}
+.cinta span::after{content:"★";color:var(--sol);margin-left:2.8rem}
+
+/* ========== EL ESPACIO ========== */
+.espacio{overflow:hidden}
+.espacio-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.collage{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.collage>div{animation:flota 6s ease-in-out infinite}
+.collage>div:nth-child(2){animation-delay:-2s}
+.collage>div:nth-child(3){animation-delay:-4s}
+.collage>div:first-child{grid-row:span 2}
+.collage .ph{height:100%;min-height:200px;border:6px solid #fff}
+.collage>div:first-child .ph{min-height:420px}
+.rasgos{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
+.rasgo{background:#fff;border-radius:22px;padding:1.2rem;box-shadow:0 10px 24px -18px rgba(31,74,44,.6);transition:transform .35s cubic-bezier(.2,1.5,.4,1)}
+.rasgo:hover{transform:translateY(-6px) rotate(-1deg)}
+.rasgo:hover .emoji{animation:rebota .7s ease-in-out}
+.emoji{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--menta);font-size:1.6rem;margin-bottom:.6rem}
+.rasgo p{font-size:.94rem;line-height:1.5;margin-top:.2rem}
+.hoja{position:absolute;top:-40px;font-size:1.5rem;opacity:.75;z-index:1;pointer-events:none;animation:cae var(--t,14s) linear infinite;animation-delay:var(--dl,0s)}
+
+/* ========== OCASIONES ========== */
+.ocasiones{background:var(--menta)}
+.tarjetas{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.tilt{height:100%;background:#fff;border-radius:var(--radio);position:relative;transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .25s ease-out,box-shadow .3s;box-shadow:0 14px 30px -22px rgba(31,74,44,.6);cursor:pointer}
+.tilt:hover{box-shadow:0 30px 50px -26px rgba(31,74,44,.7)}
+.tilt::after{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(circle at var(--px,50%) var(--py,50%),rgba(255,255,255,.5),transparent 45%);opacity:0;transition:opacity .3s;pointer-events:none}
+.tilt:hover::after{opacity:1}
+.tilt .ph{aspect-ratio:4/3;border-radius:var(--radio) var(--radio) 0 0;box-shadow:none}
+.insignia{position:absolute;top:-22px;right:18px;width:64px;height:64px;border-radius:50%;background:var(--sol);display:grid;place-items:center;font-size:1.9rem;box-shadow:0 10px 18px -8px rgba(0,0,0,.35);animation:balancea 3s ease-in-out infinite;z-index:2}
+.tarjeta-txt{padding:1.5rem 1.5rem 1.8rem}
+.tarjeta-txt p{margin-top:.5rem;font-size:.97rem}
+.pista{display:inline-block;margin-top:.9rem;font-family:var(--titulo);font-weight:700;font-size:.85rem;color:var(--coral)}
+.olas{position:absolute;left:0;right:0;bottom:-1px;height:70px;overflow:hidden;pointer-events:none;z-index:1}
+.olas .ola.t{opacity:.5;--t:15s;animation-direction:reverse}
+
+/* ========== QUÉ INCLUYE ========== */
+.incluye{background:var(--verde-osc);overflow:hidden}
+.incluye h2,.incluye h3{color:#fff}
+.incluye p{color:rgba(255,255,255,.78)}
+.luz{position:absolute;border-radius:50%;filter:blur(50px);opacity:.35;animation:flota 9s ease-in-out infinite;pointer-events:none}
+.incluye-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem)}
+.lista{margin-top:1.6rem;display:grid;gap:.8rem}
+.lista li{display:flex;gap:1rem;align-items:center;background:rgba(255,255,255,.08);border-radius:20px;padding:.9rem 1.1rem;transition:transform .3s cubic-bezier(.2,1.5,.4,1),background .3s}
+.lista li:hover{transform:translateX(10px);background:rgba(255,255,255,.15)}
+.lista .emoji{margin:0;background:rgba(255,255,255,.14);flex:none}
+.lista strong{display:block;font-family:var(--titulo);font-size:1.12rem;color:#fff}
+.lista span{font-size:.93rem;color:rgba(255,255,255,.75)}
+.caja-pasos{background:#fff;border-radius:var(--radio);padding:clamp(1.5rem,3vw,2.4rem);box-shadow:var(--sombra)}
+.caja-pasos h3{color:var(--verde-osc);font-size:1.7rem;margin-bottom:1rem}
+.caja-pasos p{color:var(--gris)}
+.pasos{position:relative;padding-left:0}
+.pasos::before,.linea-llena{content:"";position:absolute;left:23px;top:24px;bottom:24px;width:4px;border-radius:4px;background:var(--menta)}
+.linea-llena{background:linear-gradient(var(--agua),var(--sol),var(--coral));transform:scaleY(0);transform-origin:top;transition:transform .2s linear}
+.paso{display:flex;gap:1.1rem;padding:1rem 0;position:relative}
+.paso b{flex:none;width:50px;height:50px;border-radius:50%;background:var(--menta);color:var(--verde);display:grid;place-items:center;font-family:var(--titulo);font-size:1.3rem;transition:transform .5s cubic-bezier(.2,1.8,.4,1),background .4s,color .4s;z-index:1}
+.paso.activo b{background:var(--verde);color:#fff;transform:scale(1.15) rotate(-6deg)}
+.paso h4{font-size:1.15rem}
+.paso p{font-size:.94rem;margin-top:.15rem}
+.nota{font-size:.9rem;margin-top:1rem;padding:1rem;border-radius:16px;background:var(--crema)}
+
+/* ========== CONTACTO ========== */
+.contacto-caja{background:linear-gradient(135deg,#bfeaf7,#d8f3e4 55%,#ffe7b0);background-size:200% 200%;animation:fondo 12s ease-in-out infinite;border-radius:40px;padding:clamp(2rem,5vw,4rem);display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,4vw,3.5rem);align-items:center;position:relative;overflow:hidden}
+.contacto-caja>*{position:relative;z-index:1}
+.contacto-caja .acciones{margin-top:1.8rem}
+.contacto-caja>div>p{color:#3f4a44;margin-top:1rem;font-size:1.08rem}
+.info{background:#fff;border-radius:var(--radio);padding:1.6rem;box-shadow:var(--sombra)}
+.info li{display:flex;gap:1rem;align-items:flex-start;padding:.9rem 0;border-bottom:2px dashed var(--menta)}
+.info li:first-child{padding-top:0}
+.info li:last-child{border-bottom:0;padding-bottom:0}
+.info .emoji{margin:0;flex:none}
+.info small{display:block;font-family:var(--titulo);font-weight:800;font-size:.8rem;color:var(--coral)}
+.info a,.info div>span{font-weight:600;color:var(--carbon)}
+.info a:hover{color:var(--verde);text-decoration:underline}
+.info em{display:block;font-style:normal;font-size:.9rem;color:var(--gris)}
+
+/* ========== FOOTER ========== */
+footer{background:var(--verde-osc);color:rgba(255,255,255,.78);padding:3.5rem 0 1.8rem;position:relative}
+.pie{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.16)}
+footer .marca{color:#fff;margin-bottom:.8rem}
+footer .marca svg{color:var(--sol)}
+footer p{color:rgba(255,255,255,.72);font-size:.94rem;max-width:340px}
+footer h4{font-size:.95rem;color:var(--sol);margin-bottom:1rem}
+footer li{margin-bottom:.55rem}
+footer li a{font-size:.95rem;display:inline-flex;align-items:center;gap:.5rem;transition:color .2s,transform .2s}
+footer li a:hover{color:#fff;transform:translateX(5px)}
+footer li svg{width:18px;height:18px}
+.copy{padding-top:1.5rem;font-size:.84rem;text-align:center;color:rgba(255,255,255,.55)}
+
+/* ========== BOTÓN FLOTANTE WHATSAPP ========== */
+.flotante{position:fixed;right:18px;bottom:18px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25a35a;color:#fff;display:grid;place-items:center;box-shadow:0 12px 28px -8px rgba(31,74,44,.7);transition:transform .25s cubic-bezier(.2,1.6,.4,1)}
+.flotante:hover{transform:scale(1.12) rotate(8deg)}
+.flotante svg{width:30px;height:30px;position:relative}
+.flotante::before,.flotante::after{content:"";position:absolute;inset:0;border-radius:50%;border:3px solid #25a35a;animation:pulso 2.4s ease-out infinite}
+.flotante::after{animation-delay:1.2s}
+
+/* ========== APARICIÓN AL HACER SCROLL ========== */
+.js [data-ap]{opacity:0;transition:opacity .7s ease,transform .9s cubic-bezier(.2,1.3,.4,1);transition-delay:var(--r,0ms)}
+.js [data-ap=arriba]{transform:translateY(60px)}
+.js [data-ap=izq]{transform:translateX(-70px) rotate(-4deg)}
+.js [data-ap=der]{transform:translateX(70px) rotate(4deg)}
+.js [data-ap=zoom]{transform:scale(.6)}
+.js [data-ap].visto{opacity:1;transform:none}
+
+/* ========== RECORRIDO (galería horizontal) ========== */
+.recorrido{background:var(--verde-osc);overflow:hidden}
+.recorrido h2{color:#fff}
+.recorrido .rec-cab p{color:rgba(255,255,255,.78);margin-top:.8rem;max-width:520px}
+.rec-cab{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.2rem}
+.rec-barra{width:min(280px,100%);height:6px;border-radius:6px;background:rgba(255,255,255,.15);overflow:hidden}
+.rec-barra i{display:block;height:100%;background:linear-gradient(90deg,var(--agua),var(--sol),var(--coral));transform:scaleX(0);transform-origin:left}
+.rec-pista{display:flex;align-items:flex-start;gap:1.4rem;margin-top:2.4rem;padding:0 max(1.25rem,calc((100vw - 1160px)/2)) 1.2rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;position:relative;z-index:2}
+.rec-pista::-webkit-scrollbar{display:none}
+.rec-item{flex:none;position:relative;height:clamp(320px,56vh,520px);aspect-ratio:3/4;border-radius:var(--radio);overflow:hidden;border:6px solid #fff;box-shadow:0 30px 50px -25px rgba(0,0,0,.6);scroll-snap-align:center;background:#8fd0c7}
+.rec-item.ancho{aspect-ratio:4/3}
+.rec-item img{position:absolute;top:0;left:-8%;width:116%;max-width:none;height:100%;object-fit:cover}
+.rec-item figcaption{position:absolute;left:12px;right:12px;bottom:12px;background:rgba(255,255,255,.93);border-radius:16px;padding:.6rem .9rem;font-family:var(--titulo);font-weight:800;color:var(--verde-osc);font-size:.95rem;line-height:1.3}
+.rec-item figcaption small{display:block;color:var(--coral);font-size:.75rem}
+.rec-pista-tip{display:none;margin-top:.4rem;font-family:var(--titulo);font-weight:700;color:var(--sol);font-size:.9rem}
+.rec-horizontal{padding-top:0;padding-bottom:70px}
+.rec-horizontal .rec-pin{height:100vh;display:flex;flex-direction:column;justify-content:center;padding-top:80px}
+.rec-horizontal .rec-pista{overflow:visible;scroll-snap-type:none;width:max-content;padding-right:10vw}
+.rec-horizontal .rec-item:nth-child(even){margin-top:3.5rem}
+@media (max-width:920px){.rec-pista-tip{display:block}}
+@media (max-width:560px){.rec-item{height:min(400px,58vh)}.rec-item figcaption{font-size:.88rem}}
+
+/* ========== EFECTOS GSAP ========== */
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-stopped{overflow:hidden}
+.gsap-on .collage .ph img,.gsap-on .tilt .ph img{will-change:transform}
+
+/* ========== VISOR DE FOTOS ========== */
+.ampliable img{cursor:zoom-in}
+.visor{position:fixed;inset:0;z-index:120;background:rgba(15,36,22,.9);display:none;align-items:center;justify-content:center;flex-direction:column;gap:1rem;padding:1.5rem}
+.visor.abierto{display:flex;animation:aparece .25s ease-out}
+.visor img{max-width:min(92vw,900px);max-height:80vh;border-radius:22px;border:6px solid #fff;box-shadow:0 30px 60px -20px rgba(0,0,0,.6);object-fit:contain;background:#fff}
+.visor p{color:#fff;font-family:var(--titulo);font-weight:700;text-align:center;max-width:600px}
+.visor button{position:absolute;width:52px;height:52px;border-radius:50%;border:0;background:#fff;color:var(--verde-osc);font-size:1.6rem;font-weight:800;cursor:pointer;display:grid;place-items:center;box-shadow:var(--sombra)}
+.visor button:hover{background:var(--sol)}
+.visor .cerrar{top:18px;right:18px}
+.visor .ant{left:18px;top:50%;transform:translateY(-50%)}
+.visor .sig{right:18px;top:50%;transform:translateY(-50%)}
+@media (max-width:560px){.visor .ant,.visor .sig{top:auto;bottom:18px;transform:none}}
+@keyframes aparece{from{opacity:0}}
+
+/* ========== KEYFRAMES ========== */
+@keyframes gira{to{transform:rotate(360deg)}}
+@keyframes late{50%{transform:scale(1.07)}}
+@keyframes viaja{from{transform:translateX(-30vw)}to{transform:translateX(110vw)}}
+@keyframes desliza{to{transform:translateX(-50%)}}
+@keyframes mece{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+@keyframes flota{50%{transform:translateY(-12px)}}
+@keyframes boya{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-14px) rotate(8deg)}}
+@keyframes rebota{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-22px) rotate(160deg)}}
+@keyframes balancea{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg) scale(1.05)}}
+@keyframes salta{from{opacity:0;transform:translateY(40px) scale(.6) rotate(-8deg)}to{opacity:1;transform:none}}
+@keyframes subraya{to{background-size:100% .26em}}
+@keyframes gota{0%,100%{border-radius:58% 42% 55% 45%/48% 55% 45% 52%}33%{border-radius:42% 58% 46% 54%/56% 44% 56% 44%}66%{border-radius:52% 48% 60% 40%/42% 58% 42% 58%}}
+@keyframes cae{0%{transform:translate(0,0) rotate(0)}100%{transform:translate(120px,900px) rotate(540deg)}}
+@keyframes pulso{from{transform:scale(1);opacity:.8}to{transform:scale(1.9);opacity:0}}
+@keyframes fondo{50%{background-position:100% 100%}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .js [data-ap]{opacity:1;transform:none}
+  .marca-h{background-size:100% .26em}
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width:920px){
+  .hero-grid,.espacio-grid,.incluye-grid,.contacto-caja{grid-template-columns:1fr}
+  .hero-foto{max-width:360px}
+  .tarjetas{grid-template-columns:1fr;max-width:480px;margin-inline:auto;gap:2.4rem}
+  .pie{grid-template-columns:1fr 1fr}
+  .pie>div:first-child{grid-column:1/-1}
+  .menu-btn{display:grid;place-items:center}
+  .nav-links{position:absolute;top:76px;left:0;right:0;background:#fff;border-radius:26px;flex-direction:column;align-items:stretch;gap:0;padding:.6rem 1.4rem 1.4rem;box-shadow:var(--sombra);display:none}
+  .nav-links.abierto{display:flex;animation:salta .4s cubic-bezier(.2,1.4,.4,1) both}
+  .enlace{padding:.9rem 0;border-bottom:2px dashed var(--menta);font-size:1.05rem}
+  .nav-links .btn{margin-top:1.1rem}
+  .arbol.der{display:none}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .marca{font-size:1.05rem}
+  .marca svg{width:26px;height:26px}
+  .rasgos{grid-template-columns:1fr}
+  .collage>div:first-child .ph{min-height:300px}
+  .acciones .btn{width:100%}
+  .pie{grid-template-columns:1fr}
+  .sello{width:104px;height:104px;left:-6px}
+  .sello strong{font-size:2rem}
+  .flotador{left:5%;width:74px}
+  .pelota{right:8%;width:52px;height:52px}
+  .sol{top:96px}
+}
+</style>
+</head>
+<body>
+
+<div id="progreso" aria-hidden="true"></div>
+<canvas id="confeti" aria-hidden="true"></canvas>
+
+<!-- Forma de ola reutilizable -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="ola" viewBox="0 0 2400 100" preserveAspectRatio="none"><path d="M0 50Q100 10 200 50T400 50T600 50T800 50T1000 50T1200 50T1400 50T1600 50T1800 50T2000 50T2200 50T2400 50V100H0Z"/></symbol></svg>
+
+<!-- ================= 1. NAVBAR ================= -->
+<header class="nav">
+  <div class="contenedor nav-int">
+    <a href="#inicio" class="marca" aria-label="El Quillay de Pirque, inicio">
+      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 29V15"/><path d="M16 15c-6 0-9-4-9-9 6 0 9 4 9 9z"/><path d="M16 19c5 0 9-3 9-9-5 0-9 3-9 9z"/><path d="M10 29h12"/></svg>
+      El Quillay de Pirque
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav-links" id="menu">
+      <a class="enlace" href="#espacio">El Espacio</a>
+      <a class="enlace" href="#recorrido">Galería</a>
+      <a class="enlace" href="#ocasiones">Ocasiones</a>
+      <a class="enlace" href="#incluye">Qué Incluye</a>
+      <a class="enlace" href="#valores">Valores</a>
+      <a class="enlace" href="#contacto">Contacto</a>
+      <a class="btn btn-verde btn-chico iman" data-confeti href="https://wa.me/56993979291?text=Hola%2C%20quiero%20consultar%20disponibilidad%20en%20El%20Quillay%20de%20Pirque%20%F0%9F%8C%9E" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.2A8.5 8.5 0 1 1 21 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"/></svg>
+        Reservar por WhatsApp
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= 2. HERO ================= -->
+<section class="hero" id="inicio">
+  <div class="capa sol" aria-hidden="true"><i></i></div>
+  <div class="capa nube" style="top:120px;left:0;--t:46s" aria-hidden="true"><b></b></div>
+  <div class="capa nube" style="top:250px;left:0;--t:62s;--dl:-30s;--d:22" aria-hidden="true"><b></b></div>
+  <div class="capa nube" style="top:60px;left:0;--t:75s;--dl:-50s;--d:8" aria-hidden="true"><b></b></div>
+  <canvas id="burbujas" aria-hidden="true"></canvas>
+
+  <div class="contenedor hero-grid">
+    <div>
+      <span class="etiqueta" data-ap="zoom">🌞 Pirque · Región Metropolitana</span>
+      <h1>
+        <span class="pal">¡Piscina,</span> <span class="pal">risas</span> <span class="pal">y</span> <span class="pal">celebraciones</span> <span class="pal">en</span>
+        <span class="marca-h"><span class="pal">El</span> <span class="pal">Quillay</span> <span class="pal">de</span> <span class="pal">Pirque!</span></span>
+      </h1>
+      <p class="sub" data-ap="arriba" style="--r:700ms">Piscina y terraza equipada en un espacio privado para hasta 20 personas. Un ambiente familiar para tardes en familia, bautismos y cumpleaños.</p>
+      <div class="acciones" data-ap="arriba" style="--r:850ms">
+        <a class="btn btn-verde iman" data-confeti href="https://wa.me/56993979291?text=Hola%2C%20quiero%20consultar%20disponibilidad%20en%20El%20Quillay%20de%20Pirque%20%F0%9F%8C%9E" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.2A8.5 8.5 0 1 1 21 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"/></svg>
+          Cotizar por WhatsApp
+        </a>
+        <a class="btn btn-linea iman" href="#incluye">Ver qué incluye</a>
+      </div>
+      <div class="datos" data-ap="arriba" style="--r:1000ms">
+        <span class="dato" style="--n:0">👨‍👩‍👧‍👦 Hasta 20 personas</span>
+        <span class="dato" style="--n:1">🏊 Piscina</span>
+        <span class="dato" style="--n:2">🌿 Terraza equipada</span>
+        <span class="dato" style="--n:3">💲 $8.000 por persona</span>
+        <span class="dato" style="--n:4">🕐 10:00 a 20:00 h</span>
+      </div>
+    </div>
+    <div class="hero-foto ampliable" data-ap="zoom" style="--r:400ms">
+      <div class="ph c" data-foto="Foto principal · piscina"><img fetchpriority="high" src="assets/img/portada.jpg" alt="Terraza con parrilla y vista a la piscina en El Quillay de Pirque"></div>
+      <div class="sello"><div><strong data-cuenta="20">20</strong><span>personas<br>máximo</span></div></div>
+    </div>
+  </div>
+
+  <div class="piscina" aria-hidden="true">
+    <div class="capa arbol" style="left:2%"><svg viewBox="0 0 120 150"><rect x="54" y="90" width="12" height="60" rx="5" fill="#8a5a3c"/><circle cx="60" cy="55" r="42" fill="#3d8a50"/><circle cx="34" cy="74" r="26" fill="#2f6b3f"/><circle cx="88" cy="72" r="28" fill="#4c9c5f"/></svg></div>
+    <div class="capa arbol der" style="right:3%;--d:14"><svg viewBox="0 0 120 150" style="animation-delay:-2s"><rect x="54" y="90" width="12" height="60" rx="5" fill="#8a5a3c"/><circle cx="60" cy="55" r="42" fill="#4c9c5f"/><circle cx="34" cy="74" r="26" fill="#3d8a50"/><circle cx="88" cy="72" r="28" fill="#2f6b3f"/></svg></div>
+    <svg class="ola a"><use href="#ola"/></svg>
+    <svg class="ola b"><use href="#ola"/></svg>
+    <svg class="flotador" viewBox="0 0 100 100"><circle cx="50" cy="50" r="32" fill="none" stroke="#fff" stroke-width="22"/><circle cx="50" cy="50" r="32" fill="none" stroke="#f2815e" stroke-width="22" stroke-dasharray="25.13 25.13"/></svg>
+    <div class="patito">🦆</div>
+    <div class="pelota"></div>
+    <svg class="ola c"><use href="#ola"/></svg>
+  </div>
+</section>
+
+<div class="cinta" aria-hidden="true">
+  <div>
+    <span>Piscina</span><span>Terraza equipada</span><span>Hasta 20 personas</span><span>Cumpleaños</span><span>Bautismos</span><span>Tardes en familia</span><span>Espacio privado</span><span>$8.000 por persona</span>
+    <span>Piscina</span><span>Terraza equipada</span><span>Hasta 20 personas</span><span>Cumpleaños</span><span>Bautismos</span><span>Tardes en familia</span><span>Espacio privado</span><span>$8.000 por persona</span>
+  </div>
+</div>
+
+<!-- ================= 3. EL ESPACIO ================= -->
+<section class="espacio con-olas" id="espacio">
+  <span class="hoja" style="left:8%;--t:13s" aria-hidden="true">🍃</span>
+  <span class="hoja" style="left:32%;--t:17s;--dl:-6s" aria-hidden="true">🍃</span>
+  <span class="hoja" style="left:61%;--t:15s;--dl:-10s" aria-hidden="true">🍃</span>
+  <span class="hoja" style="left:84%;--t:19s;--dl:-3s" aria-hidden="true">🍃</span>
+  <div class="contenedor espacio-grid">
+    <div class="collage ampliable" data-ap="izq">
+      <div><div class="ph c" data-foto="Foto · piscina"><img loading="lazy" decoding="async" src="assets/img/piscina-noche.jpg" alt="Piscina iluminada al atardecer"></div></div>
+      <div><div class="ph b" data-foto="Foto · terraza"><img loading="lazy" decoding="async" src="assets/img/terraza-techada.jpg" alt="Terraza bajo techo con mesa, sillas y cocina"></div></div>
+      <div><div class="ph" data-foto="Foto · jardín"><img loading="lazy" decoding="async" src="assets/img/parrilla-deck.jpg" alt="Deck de madera con parrilla y mesa alta entre árboles"></div></div>
+    </div>
+    <div>
+      <div data-ap="der">
+        <span class="etiqueta">El Espacio</span>
+        <h2>Un lugar para pasarlo bien, grandes y chicos</h2>
+        <p style="margin-top:1rem">El Quillay de Pirque es un espacio privado, rodeado de naturaleza y cerca de Santiago. Lo arriendas por jornada o evento y es solo para tu grupo: hasta 20 personas, con la comodidad de sentirse como en casa.</p>
+      </div>
+      <div class="rasgos escalera">
+        <div class="rasgo" data-ap="arriba"><div class="emoji">🏊</div><h3>Piscina</h3><p>Para refrescarse y jugar todo el día.</p></div>
+        <div class="rasgo" data-ap="arriba"><div class="emoji">⛱️</div><h3>Terraza equipada</h3><p>Cómoda y con sombra para compartir la mesa.</p></div>
+        <div class="rasgo" data-ap="arriba"><div class="emoji">🌳</div><h3>Áreas de descanso</h3><p>Rincones al aire libre para relajarse y conversar.</p></div>
+        <div class="rasgo" data-ap="arriba"><div class="emoji">💛</div><h3>Ambiente acogedor</h3><p>Familiar, tranquilo y solo para tus invitados.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="olas" aria-hidden="true" style="fill:var(--verde-osc)"><svg class="ola t"><use href="#ola"/></svg><svg class="ola"><use href="#ola"/></svg></div>
+</section>
+
+<!-- ================= 3b. RECORRIDO ================= -->
+<section class="recorrido con-olas" id="recorrido">
+  <div class="rec-pin">
+    <div class="contenedor rec-cab">
+      <div>
+        <span class="etiqueta">Recorrido</span>
+        <h2>Date una vuelta por El Quillay</h2>
+        <p>Así es el espacio que será solo para tu grupo: piscina, terraza, comedor y cocina equipada.</p>
+        <span class="rec-pista-tip">Desliza para ver más →</span>
+      </div>
+      <div class="rec-barra" aria-hidden="true"><i></i></div>
+    </div>
+    <div class="rec-pista ampliable">
+      <figure class="rec-item"><img loading="lazy" decoding="async" src="assets/img/portada.jpg" alt="Terraza con parrilla y vista a la piscina"><figcaption><small>01</small>Terraza con vista a la piscina</figcaption></figure>
+      <figure class="rec-item"><img loading="lazy" decoding="async" src="assets/img/piscina-noche.jpg" alt="Piscina iluminada"><figcaption><small>02</small>Piscina iluminada</figcaption></figure>
+      <figure class="rec-item ancho"><img loading="lazy" decoding="async" src="assets/img/terraza-techada.jpg" alt="Espacio bajo techo con comedor y cocina"><figcaption><small>03</small>Espacio bajo techo</figcaption></figure>
+      <figure class="rec-item"><img loading="lazy" decoding="async" src="assets/img/mesa-larga.jpg" alt="Mesa larga de madera para todo el grupo"><figcaption><small>04</small>Comedor para todo el grupo</figcaption></figure>
+      <figure class="rec-item"><img loading="lazy" decoding="async" src="assets/img/parrilla-deck.jpg" alt="Deck de madera con parrilla y mesa alta"><figcaption><small>05</small>Deck con parrilla</figcaption></figure>
+      <figure class="rec-item"><img loading="lazy" decoding="async" src="assets/img/mesa-familia.jpg" alt="Mesa al aire libre con mantel"><figcaption><small>06</small>Mesa al aire libre</figcaption></figure>
+      <figure class="rec-item ancho"><img loading="lazy" decoding="async" src="assets/img/piscina.jpg" alt="Piscina con luces de guirnalda"><figcaption><small>07</small>Piscina con luces</figcaption></figure>
+      <figure class="rec-item"><img loading="lazy" decoding="async" src="assets/img/cocina.jpg" alt="Cocina exterior con encimera a gas y horno"><figcaption><small>08</small>Cocina equipada</figcaption></figure>
+      <figure class="rec-item"><img loading="lazy" decoding="async" src="assets/img/lavaplatos.jpg" alt="Lavaloza exterior de madera"><figcaption><small>09</small>Lavaloza exterior</figcaption></figure>
+      <figure class="rec-item"><img loading="lazy" decoding="async" src="assets/img/utensilios.jpg" alt="Vajilla, hervidor y microondas"><figcaption><small>10</small>Vajilla y utensilios</figcaption></figure>
+    </div>
+  </div>
+  <div class="olas" aria-hidden="true" style="fill:var(--menta)"><svg class="ola t"><use href="#ola"/></svg><svg class="ola"><use href="#ola"/></svg></div>
+</section>
+
+<!-- ================= 4. OCASIONES ================= -->
+<section class="ocasiones con-olas" id="ocasiones">
+  <div class="contenedor">
+    <div class="intro" data-ap="arriba">
+      <span class="etiqueta">Ocasiones</span>
+      <h2>Ideal para cada momento</h2>
+      <p>Cuéntanos qué quieres celebrar en El Quillay de Pirque y coordinamos la fecha contigo.</p>
+    </div>
+    <div class="tarjetas escalera">
+      <article data-ap="arriba">
+        <div class="tilt">
+          <div class="insignia">🏖️</div>
+          <div class="ph c" data-foto="Foto · familia"><img loading="lazy" decoding="async" src="assets/img/mesa-familia.jpg" alt="Mesa al aire libre con mantel y sillas para compartir en familia"></div>
+          <div class="tarjeta-txt">
+            <h3>Paseos y tardes en familia</h3>
+            <p>Un día de piscina, sobremesa larga y niños jugando al aire libre, sin apuros y sin compartir el espacio con nadie más.</p>
+          </div>
+        </div>
+      </article>
+      <article data-ap="arriba">
+        <div class="tilt">
+          <div class="insignia">🕊️</div>
+          <div class="ph b" data-foto="Foto · bautismo"><img loading="lazy" decoding="async" src="assets/img/mesa-larga.jpg" alt="Mesa larga de madera bajo techo, lista para una celebración"></div>
+          <div class="tarjeta-txt">
+            <h3>Bautismos y celebraciones especiales</h3>
+            <p>Un entorno natural y luminoso para reunir a los más cercanos y celebrar esos momentos que se recuerdan siempre.</p>
+          </div>
+        </div>
+      </article>
+      <article data-ap="arriba" id="cumple">
+        <div class="tilt" data-confeti>
+          <div class="insignia">🎂</div>
+          <div class="ph" data-foto="Foto · cumpleaños"><img loading="lazy" decoding="async" src="assets/img/piscina.jpg" alt="Piscina de El Quillay de Pirque"></div>
+          <div class="tarjeta-txt">
+            <h3>Cumpleaños y encuentros</h3>
+            <p>Celebra con amigos o familiares en un espacio cómodo y privado, pensado para grupos de hasta 20 personas.</p>
+            <span class="pista">🎉 ¡Tócame para celebrar!</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+  <div class="olas" aria-hidden="true" style="fill:var(--verde-osc)"><svg class="ola t"><use href="#ola"/></svg><svg class="ola"><use href="#ola"/></svg></div>
+</section>
+
+<!-- ================= 5. QUÉ INCLUYE Y CÓMO FUNCIONA ================= -->
+<section class="incluye con-olas" id="incluye">
+  <div class="luz" style="width:320px;height:320px;background:var(--agua);left:-80px;top:10%" aria-hidden="true"></div>
+  <div class="luz" style="width:280px;height:280px;background:var(--sol);right:-60px;bottom:15%;animation-delay:-4s" aria-hidden="true"></div>
+  <div class="contenedor incluye-grid">
+    <div>
+      <div data-ap="izq">
+        <span class="etiqueta">Qué Incluye</span>
+        <h2>Todo lo necesario para un buen día</h2>
+      </div>
+      <ul class="lista escalera">
+        <li data-ap="izq"><div class="emoji">👨‍👩‍👧‍👦</div><div><strong>Capacidad máxima: 20 personas</strong><span>Para grupos pequeños y celebraciones íntimas.</span></div></li>
+        <li data-ap="izq"><div class="emoji">🏊</div><div><strong>Piscina</strong><span>Disponible para tu grupo durante la jornada.</span></div></li>
+        <li data-ap="izq"><div class="emoji">⛱️</div><div><strong>Terraza equipada</strong><span>Con sombra para comer, compartir y descansar.</span></div></li>
+        <li data-ap="izq"><div class="emoji">🔒</div><div><strong>Privacidad</strong><span>Arriendo exclusivo: solo para tus invitados.</span></div></li>
+        <li data-ap="izq"><div class="emoji">📍</div><div><strong>Ubicación en Pirque</strong><span>Entorno natural en la Región Metropolitana.</span></div></li>
+        <li data-ap="izq"><div class="emoji">🕐</div><div><strong>Horario: 10:00 a 20:00 h</strong><span>Toda la jornada para tu grupo.</span></div></li>
+        <li data-ap="izq"><div class="emoji">📅</div><div><strong>Reserva con 48 horas de anticipación</strong><span>Así alcanzamos a dejar todo listo para ti.</span></div></li>
+      </ul>
+    </div>
+    <div data-ap="der">
+      <div class="caja-pasos">
+        <span class="etiqueta">Cómo funciona</span>
+        <h3>Reservar es simple</h3>
+        <div class="pasos">
+          <i class="linea-llena"></i>
+          <div class="paso"><b>1</b><div><h4>Escríbenos por WhatsApp</h4><p>Cuéntanos la fecha, el tipo de celebración y cuántas personas serán.</p></div></div>
+          <div class="paso"><b>2</b><div><h4>Reserva con 48 horas de anticipación</h4><p>Confirmamos tu fecha con un abono del 50% del total. El saldo lo pagas al ingresar.</p></div></div>
+          <div class="paso"><b>3</b><div><h4>Llega y disfruta</h4><p>Te esperamos de 10:00 a 20:00 horas. Al confirmar tu reserva te enviamos la ubicación exacta y las indicaciones para llegar.</p></div></div>
+        </div>
+        <p class="nota">💬 $8.000 por persona · mínimo $80.000 por reserva · abono 50%. Consulta disponibilidad por WhatsApp.</p>
+        <a class="btn btn-sol iman" data-confeti style="margin-top:1.2rem;width:100%" href="https://wa.me/56993979291?text=Hola%2C%20quiero%20consultar%20disponibilidad%20en%20El%20Quillay%20de%20Pirque%20%F0%9F%8C%9E" target="_blank" rel="noopener">Consultar mi fecha</a>
+      </div>
+    </div>
+  </div>
+  <div class="olas" aria-hidden="true" style="fill:var(--crema)"><svg class="ola t"><use href="#ola"/></svg><svg class="ola"><use href="#ola"/></svg></div>
+</section>
+
+<!-- ================= 6. VALORES Y HORARIOS ================= -->
+<section class="valores" id="valores">
+  <span class="hoja" style="left:14%;--t:16s" aria-hidden="true">🍃</span>
+  <span class="hoja" style="left:72%;--t:14s;--dl:-7s" aria-hidden="true">🍃</span>
+  <div class="contenedor">
+    <div class="intro" data-ap="arriba">
+      <span class="etiqueta">Valores y horarios</span>
+      <h2>Claro y sin sorpresas</h2>
+      <p>Estos son nuestros valores y condiciones para que puedas organizar tu día con tranquilidad.</p>
+    </div>
+    <div class="precios escalera">
+      <div class="precio" data-ap="arriba"><div class="emoji">💲</div><h3>Valor por persona</h3><strong>$8.000</strong><span>Tarifa mínima de reserva: $80.000 CLP</span></div>
+      <div class="precio" data-ap="arriba"><div class="emoji">🤝</div><h3>Abono para reservar</h3><strong>50%</strong><span>El saldo restante se paga al ingresar</span></div>
+      <div class="precio" data-ap="arriba"><div class="emoji">📅</div><h3>Anticipación</h3><strong>48 horas</strong><span>Reserva tu fecha con dos días de anticipación</span></div>
+      <div class="precio" data-ap="arriba"><div class="emoji">🕐</div><h3>Horario</h3><strong>10:00 a 20:00</strong><span>Jornada completa para tu grupo</span></div>
+    </div>
+    <p class="aviso" data-ap="zoom">🎄 Días festivos (Navidad y Año Nuevo): consultar valores y horarios.<em>Escríbenos por WhatsApp y te contamos las condiciones de esas fechas.</em></p>
+    <div class="galeria escalera ampliable">
+      <div class="ph" data-ap="zoom" data-foto="Foto · cocina"><img loading="lazy" decoding="async" src="assets/img/cocina.jpg" alt="Cocina exterior con encimera a gas y horno"></div>
+      <div class="ph b" data-ap="zoom" data-foto="Foto · lavaplatos"><img loading="lazy" decoding="async" src="assets/img/lavaplatos.jpg" alt="Lavaplatos exterior de madera junto al deck"></div>
+      <div class="ph c" data-ap="zoom" data-foto="Foto · utensilios"><img loading="lazy" decoding="async" src="assets/img/utensilios.jpg" alt="Utensilios disponibles para los invitados"></div>
+      <div class="ph" data-ap="zoom" data-foto="Foto · comedor"><img loading="lazy" decoding="async" src="assets/img/terraza-techada.jpg" alt="Comedor techado con mesa para todo el grupo"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 7. CONTACTO ================= -->
+<section id="contacto">
+  <div class="contenedor">
+    <div class="contacto-caja" data-ap="zoom">
+      <div>
+        <span class="etiqueta">Contacto</span>
+        <h2>¿Tienes una fecha en mente?</h2>
+        <p>Escríbenos y te contamos la disponibilidad y las tarifas de El Quillay de Pirque. Te respondemos por WhatsApp.</p>
+        <div class="acciones">
+          <a class="btn btn-verde iman" data-confeti href="https://wa.me/56993979291?text=Hola%2C%20quiero%20consultar%20disponibilidad%20en%20El%20Quillay%20de%20Pirque%20%F0%9F%8C%9E" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.2A8.5 8.5 0 1 1 21 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"/></svg>
+            Cotizar por WhatsApp
+          </a>
+          <a class="btn btn-linea iman" href="https://www.instagram.com/elquillaydepirque/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></svg>
+            Ver Instagram
+          </a>
+        </div>
+      </div>
+      <ul class="info">
+        <li><div class="emoji">💬</div><div><small>WhatsApp</small><a href="https://wa.me/56993979291?text=Hola%2C%20quiero%20consultar%20disponibilidad%20en%20El%20Quillay%20de%20Pirque%20%F0%9F%8C%9E" target="_blank" rel="noopener">+56 9 9397 9291</a><em>Consultar disponibilidad y tarifas</em></div></li>
+        <li><div class="emoji">📸</div><div><small>Instagram</small><a href="https://www.instagram.com/elquillaydepirque/" target="_blank" rel="noopener">@elquillaydepirque</a><em>Fotos y novedades del espacio</em></div></li>
+        <li><div class="emoji">📍</div><div><small>Ubicación referencial</small><span>Pirque, Región Metropolitana, Chile</span><em>La ubicación exacta se entrega al confirmar la reserva</em></div></li>
+        <li><div class="emoji">🕐</div><div><small>Horario de funcionamiento</small><span>Todos los días de 10:00 a 20:00 horas</span><em>Reserva con 48 horas de anticipación</em></div></li>
+        <li><div class="emoji">💲</div><div><small>Valores</small><span>$8.000 por persona · mínimo $80.000</span><em>Abono del 50% para reservar; el saldo se paga al ingresar. Días festivos (Navidad y Año Nuevo): consultar.</em></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= 8. FOOTER ================= -->
+<footer>
+  <div class="contenedor">
+    <div class="pie">
+      <div>
+        <a href="#inicio" class="marca">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 29V15"/><path d="M16 15c-6 0-9-4-9-9 6 0 9 4 9 9z"/><path d="M16 19c5 0 9-3 9-9-5 0-9 3-9 9z"/><path d="M10 29h12"/></svg>
+          El Quillay de Pirque
+        </a>
+        <p>Piscina y terraza equipada en Pirque para disfrutar en familia y celebrar con hasta 20 personas.</p>
+      </div>
+      <div>
+        <h4>Accesos rápidos</h4>
+        <ul>
+          <li><a href="#espacio">El Espacio</a></li>
+          <li><a href="#recorrido">Galería</a></li>
+          <li><a href="#ocasiones">Ocasiones</a></li>
+          <li><a href="#incluye">Qué Incluye</a></li>
+          <li><a href="#valores">Valores y horarios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Escríbenos</h4>
+        <ul>
+          <li><a href="https://wa.me/56993979291?text=Hola%2C%20quiero%20consultar%20disponibilidad%20en%20El%20Quillay%20de%20Pirque%20%F0%9F%8C%9E" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.2A8.5 8.5 0 1 1 21 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"/></svg>+56 9 9397 9291</a></li>
+          <li><a href="https://www.instagram.com/elquillaydepirque/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/></svg>@elquillaydepirque</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copy">© <span id="anio">2026</span> El Quillay de Pirque · Pirque, Región Metropolitana, Chile</p>
+  </div>
+</footer>
+
+<div class="visor" id="visor" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <button class="cerrar" aria-label="Cerrar">✕</button>
+  <button class="ant" aria-label="Foto anterior">‹</button>
+  <img alt="">
+  <p></p>
+  <button class="sig" aria-label="Foto siguiente">›</button>
+</div>
+
+<a class="flotante" href="https://wa.me/56993979291?text=Hola%2C%20quiero%20consultar%20disponibilidad%20en%20El%20Quillay%20de%20Pirque%20%F0%9F%8C%9E" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.2A8.5 8.5 0 1 1 21 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"/></svg>
+</a>
+
+<script>
+(function(){
+  var R=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var $=function(s,c){return (c||document).querySelector(s)};
+  var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+
+  $('#anio').textContent=new Date().getFullYear();
+
+  /* Menú móvil */
+  var mb=$('#menuBtn'),menu=$('#menu');
+  mb.addEventListener('click',function(){var a=menu.classList.toggle('abierto');mb.setAttribute('aria-expanded',a)});
+  $$('a',menu).forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('abierto');mb.setAttribute('aria-expanded','false')})});
+
+  /* Titular palabra por palabra y apariciones en escalera */
+  $$('.pal').forEach(function(p,i){p.style.setProperty('--i',i)});
+  $$('.escalera').forEach(function(g){$$('[data-ap]',g).forEach(function(c,i){c.style.setProperty('--r',(i*110)+'ms')})});
+
+  /* Contador */
+  function cuenta(el){
+    var fin=+el.dataset.cuenta,t0=null;
+    if(R){el.textContent=fin;return}
+    function paso(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/1400);el.textContent=Math.round(fin*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(paso)}
+    requestAnimationFrame(paso);
+  }
+
+  /* Aparición al hacer scroll */
+  var cumpleListo=false;
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(!e.isIntersecting)return;
+      var t=e.target;io.unobserve(t);
+      if(t.dataset.cuenta!==undefined){cuenta(t);return}
+      t.classList.add('visto');
+      if(t.id==='cumple'&&!cumpleListo){cumpleListo=true;setTimeout(function(){var r=t.getBoundingClientRect();confeti(r.left+r.width/2,r.top+r.height/3,70)},500)}
+    })},{threshold:.15});
+    $$('[data-ap],[data-cuenta]').forEach(function(el){io.observe(el)});
+  }else{$$('[data-ap]').forEach(function(el){el.classList.add('visto')})}
+
+  /* Scroll: barra de progreso, navbar y línea de pasos */
+  var barra=$('#progreso'),nav=$('.nav'),pasos=$('.pasos'),linea=$('.linea-llena'),lp=$$('.paso'),tick=false;
+  function alScroll(){
+    tick=false;
+    var max=document.documentElement.scrollHeight-window.innerHeight,y=window.pageYOffset;
+    barra.style.transform='scaleX('+(max>0?y/max:0)+')';
+    nav.classList.toggle('pegada',y>20);
+    var r=pasos.getBoundingClientRect(),p=Math.min(1,Math.max(0,(window.innerHeight*.7-r.top)/r.height));
+    linea.style.transform='scaleY('+p+')';
+    lp.forEach(function(el,i){el.classList.toggle('activo',p>=(i+.25)/lp.length)});
+  }
+  window.addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(alScroll)}},{passive:true});
+  window.addEventListener('resize',alScroll);
+  alScroll();
+
+  /* Confeti */
+  var cf=$('#confeti'),k=cf.getContext('2d'),ps=[],corriendo=false;
+  var col=['#ffc94d','#f2815e','#3fc1d3','#2f6b3f','#ff9fb2','#ffffff'];
+  function confeti(px,py,n){
+    if(R)return;
+    n=n||90;cf.width=window.innerWidth;cf.height=window.innerHeight;
+    for(var i=0;i<n;i++){var a=Math.random()*6.28,v=4+Math.random()*9;
+      ps.push({x:px,y:py,vx:Math.cos(a)*v,vy:Math.sin(a)*v-6,w:6+Math.random()*7,h:4+Math.random()*5,g:Math.random()*6.28,vg:(Math.random()-.5)*.4,c:col[i%col.length],t:0})}
+    if(!corriendo){corriendo=true;requestAnimationFrame(pinta)}
+  }
+  function pinta(){
+    k.clearRect(0,0,cf.width,cf.height);
+    ps=ps.filter(function(p){return p.t<160&&p.y<cf.height+30});
+    ps.forEach(function(p){p.t++;p.vy+=.28;p.vx*=.985;p.x+=p.vx;p.y+=p.vy;p.g+=p.vg;
+      k.save();k.translate(p.x,p.y);k.rotate(p.g);k.globalAlpha=Math.max(0,1-p.t/160);k.fillStyle=p.c;
+      k.fillRect(-p.w/2,-p.h/2,p.w,p.h*Math.abs(Math.cos(p.t*.12))+1);k.restore()});
+    if(ps.length)requestAnimationFrame(pinta);else{corriendo=false;k.clearRect(0,0,cf.width,cf.height)}
+  }
+  $$('[data-confeti]').forEach(function(el){el.addEventListener('click',function(e){confeti(e.clientX,e.clientY)})});
+
+  /* Visor de fotos */
+  var vs=$('#visor'),vi=$('img',vs),vt=$('p',vs),fotos=$$('.ampliable img'),actual=0,origen=null;
+  function muestra(i){actual=(i+fotos.length)%fotos.length;vi.src=fotos[actual].src;vi.alt=fotos[actual].alt;vt.textContent=fotos[actual].alt}
+  function abre(i){origen=document.activeElement;muestra(i);vs.classList.add('abierto');document.body.style.overflow='hidden';if(window.__lenis)__lenis.stop();$('.cerrar',vs).focus()}
+  function cierra(){vs.classList.remove('abierto');document.body.style.overflow='';if(window.__lenis)__lenis.start();if(origen)origen.focus()}
+  fotos.forEach(function(f,i){f.setAttribute('tabindex','0');f.addEventListener('click',function(){abre(i)});f.addEventListener('keydown',function(e){if(e.key==='Enter')abre(i)})});
+  $('.cerrar',vs).addEventListener('click',cierra);
+  $('.ant',vs).addEventListener('click',function(){muestra(actual-1)});
+  $('.sig',vs).addEventListener('click',function(){muestra(actual+1)});
+  vs.addEventListener('click',function(e){if(e.target===vs)cierra()});
+  document.addEventListener('keydown',function(e){if(!vs.classList.contains('abierto'))return;
+    if(e.key==='Escape')cierra();else if(e.key==='ArrowLeft')muestra(actual-1);else if(e.key==='ArrowRight')muestra(actual+1)});
+
+  /* Progreso del recorrido al deslizar (celular) */
+  var rp=$('.rec-pista'),rb=$('.rec-barra i');
+  rp.addEventListener('scroll',function(){var m=rp.scrollWidth-rp.clientWidth;rb.style.transform='scaleX('+(m>0?rp.scrollLeft/m:0)+')'},{passive:true});
+
+  if(R)return;
+  var fino=window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+  /* Parallax del hero con el mouse */
+  var hero=$('.hero');
+  if(fino)hero.addEventListener('pointermove',function(e){
+    var r=hero.getBoundingClientRect();
+    hero.style.setProperty('--mx',((e.clientX-r.left)/r.width-.5)*2);
+    hero.style.setProperty('--my',((e.clientY-r.top)/r.height-.5)*2);
+  });
+
+  /* Tarjetas 3D */
+  if(fino)$$('.tilt').forEach(function(t){
+    t.addEventListener('pointermove',function(e){var r=t.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+      t.style.setProperty('--ry',((x-.5)*14)+'deg');t.style.setProperty('--rx',((.5-y)*12)+'deg');
+      t.style.setProperty('--px',(x*100)+'%');t.style.setProperty('--py',(y*100)+'%')});
+    t.addEventListener('pointerleave',function(){t.style.setProperty('--rx','0deg');t.style.setProperty('--ry','0deg')});
+  });
+
+  /* Botones magnéticos */
+  if(fino)$$('.iman').forEach(function(b){
+    b.addEventListener('pointermove',function(e){var r=b.getBoundingClientRect();
+      b.style.setProperty('--bx',((e.clientX-r.left-r.width/2)*.22)+'px');
+      b.style.setProperty('--by',((e.clientY-r.top-r.height/2)*.3)+'px')});
+    b.addEventListener('pointerleave',function(){b.style.setProperty('--bx','0px');b.style.setProperty('--by','0px')});
+  });
+
+  /* Burbujas y ondas del hero */
+  var cv=$('#burbujas'),c=cv.getContext('2d'),W=0,H=0,D=Math.min(window.devicePixelRatio||1,2),bs=[],ondas=[],visible=true;
+  function tam(){W=hero.offsetWidth;H=hero.offsetHeight;cv.width=W*D;cv.height=H*D;c.setTransform(D,0,0,D,0,0)}
+  function nueva(x,y){return{x:x===undefined?Math.random()*W:x,y:y===undefined?H+12:y,r:3+Math.random()*9,v:.4+Math.random()*1.1,f:Math.random()*6.28,a:.3+Math.random()*.4}}
+  tam();window.addEventListener('resize',tam);
+  for(var i=0;i<24;i++){var b=nueva();b.y=Math.random()*H;bs.push(b)}
+  hero.addEventListener('pointermove',function(e){if(Math.random()<.3&&bs.length<70){var r=hero.getBoundingClientRect();bs.push(nueva(e.clientX-r.left,e.clientY-r.top))}});
+  hero.addEventListener('pointerdown',function(e){var r=hero.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;
+    ondas.push({x:x,y:y,r:4,a:.8});for(var j=0;j<6&&bs.length<80;j++)bs.push(nueva(x+(Math.random()-.5)*40,y+(Math.random()-.5)*20))});
+  if('IntersectionObserver' in window)new IntersectionObserver(function(e){visible=e[0].isIntersecting}).observe(hero);
+  (function cuadro(){
+    if(visible){
+      c.clearRect(0,0,W,H);
+      for(var i=bs.length-1;i>=0;i--){var b=bs[i];b.y-=b.v;b.f+=.03;b.x+=Math.sin(b.f)*.5;
+        if(b.y<-20){if(bs.length>24)bs.splice(i,1);else bs[i]=nueva();continue}
+        c.beginPath();c.arc(b.x,b.y,b.r,0,6.28);c.fillStyle='rgba(255,255,255,'+(b.a*.35)+')';c.fill();
+        c.lineWidth=1.5;c.strokeStyle='rgba(255,255,255,'+b.a+')';c.stroke();
+        c.beginPath();c.arc(b.x-b.r*.35,b.y-b.r*.35,b.r*.22,0,6.28);c.fillStyle='rgba(255,255,255,'+(b.a+.2)+')';c.fill()}
+      for(var j=ondas.length-1;j>=0;j--){var o=ondas[j];o.r+=2.4;o.a-=.016;
+        if(o.a<=0){ondas.splice(j,1);continue}
+        c.beginPath();c.arc(o.x,o.y,o.r,0,6.28);c.lineWidth=3;c.strokeStyle='rgba(63,193,211,'+o.a+')';c.stroke();
+        c.beginPath();c.arc(o.x,o.y,o.r*.6,0,6.28);c.lineWidth=2;c.strokeStyle='rgba(255,255,255,'+o.a+')';c.stroke()}
+    }
+    requestAnimationFrame(cuadro);
+  })();
+})();
+</script>
+
+<!-- Librerías de animación (GSAP + Lenis). Si no cargan, la página funciona igual. -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(function(){
+  if(!window.gsap||!window.ScrollTrigger)return;
+  if(window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  gsap.registerPlugin(ScrollTrigger);
+  if(window.SplitText)gsap.registerPlugin(SplitText);
+  var $=function(s,c){return (c||document).querySelector(s)};
+  var $$=function(s,c){return gsap.utils.toArray((c||document).querySelectorAll(s))};
+  document.documentElement.classList.add('gsap-on');
+
+  /* 1. Scroll suave (solo computador con mouse) */
+  var fino=window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+  if(fino&&window.Lenis){
+    var lenis=new Lenis({lerp:.09,smoothWheel:true});
+    window.__lenis=lenis;
+    lenis.on('scroll',ScrollTrigger.update);
+    gsap.ticker.add(function(t){lenis.raf(t*1000)});
+    gsap.ticker.lagSmoothing(0);
+    $$('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){
+      var id=a.getAttribute('href');if(id.length<2)return;var el=$(id);if(!el)return;
+      e.preventDefault();lenis.scrollTo(el,{offset:id==='#inicio'?0:-90,duration:1.4});
+    })});
+  }
+
+  /* 2. Títulos que aparecen palabra por palabra */
+  if(window.SplitText){
+    (document.fonts&&document.fonts.ready||Promise.resolve()).then(function(){
+      $$('main h2').forEach(function(h){
+        var sp=SplitText.create(h,{type:'words',mask:'words'});
+        gsap.from(sp.words,{yPercent:115,rotate:4,duration:.9,ease:'expo.out',stagger:.06,
+          scrollTrigger:{trigger:h,start:'top 88%',once:true}});
+      });
+    });
+  }
+
+  /* 3. El hero se aleja al bajar */
+  gsap.to('.hero-grid',{yPercent:16,opacity:.35,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+  gsap.to('.hero-foto .ph',{rotate:6,scale:.9,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+
+  /* 4. Fotos con profundidad (parallax dentro del marco) */
+  $$('.collage .ph img, .tilt .ph img').forEach(function(img){
+    gsap.fromTo(img,{yPercent:-8,scale:1.18},{yPercent:8,scale:1.18,ease:'none',
+      scrollTrigger:{trigger:img.parentNode,start:'top bottom',end:'bottom top',scrub:true}});
+  });
+
+  /* 5. Cinta que acelera con la velocidad del scroll */
+  var fila=$('.cinta div');
+  if(fila){
+    fila.style.animation='none';
+    var mq=gsap.to(fila,{xPercent:-50,duration:26,ease:'none',repeat:-1});
+    ScrollTrigger.create({start:0,end:'max',onUpdate:function(s){
+      var v=gsap.utils.clamp(-7,7,s.getVelocity()/220),dir=s.direction<0?-1:1;
+      gsap.to(mq,{timeScale:dir*Math.max(1,Math.abs(v)),duration:.25,overwrite:true});
+      gsap.to(mq,{timeScale:dir,duration:1.2,delay:.3});
+    }});
+  }
+
+  /* 6. Valores que cuentan hacia arriba */
+  $$('.precio strong').forEach(function(el){
+    var m=el.textContent.trim().match(/^(\$?)([\d.]+)(\s*%|\s*horas)?$/);if(!m)return;
+    var fin=parseInt(m[2].replace(/\./g,''),10),o={v:0};
+    gsap.to(o,{v:fin,duration:1.6,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 90%',once:true},
+      onUpdate:function(){el.textContent=m[1]+Math.round(o.v).toLocaleString('es-CL')+(m[3]||'')}});
+  });
+
+  /* 7. Recorrido horizontal fijado (computador) */
+  var mm=gsap.matchMedia();
+  mm.add('(min-width:921px)',function(){
+    var sec=$('.recorrido'),pista=$('.rec-pista'),barra=$('.rec-barra i');
+    sec.classList.add('rec-horizontal');
+    var largo=function(){return Math.max(0,pista.scrollWidth-window.innerWidth)};
+    var tw=gsap.to(pista,{x:function(){return -largo()},ease:'none',
+      scrollTrigger:{trigger:'.rec-pin',start:'top top',end:function(){return '+='+largo()},pin:true,scrub:1,invalidateOnRefresh:true,
+        onUpdate:function(s){barra.style.transform='scaleX('+s.progress+')'}}});
+    $$('.rec-item').forEach(function(it,i){
+      gsap.fromTo($('img',it),{xPercent:-7},{xPercent:7,ease:'none',
+        scrollTrigger:{trigger:it,containerAnimation:tw,start:'left right',end:'right left',scrub:true}});
+      gsap.from(it,{rotate:i%2?5:-5,scale:.85,opacity:.4,ease:'power2.out',
+        scrollTrigger:{trigger:it,containerAnimation:tw,start:'left 95%',end:'left 55%',scrub:true}});
+    });
+    return function(){sec.classList.remove('rec-horizontal')};
+  });
+
+  window.addEventListener('load',function(){ScrollTrigger.refresh()});
+})();
+</script>
+</body>
+</html>
