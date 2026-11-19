@@ -13,12 +13,18 @@
 <link rel="canonical" href="https://karendigital.github.io/quillay/">
 <meta property="og:locale" content="es_CL">
 <meta name="theme-color" content="#2f6b3f">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%232f6b3f'/%3E%3Cg fill='none' stroke='%23ffc94d' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 27V15'/%3E%3Cpath d='M16 15c-6 0-8-4-8-8 6 0 8 4 8 8z'/%3E%3Cpath d='M16 19c5 0 8-3 8-8-5 0-8 3-8 8z'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="assets/img/mascota-mini.png">
+<link rel="apple-touch-icon" href="assets/img/mascota-mini.png">
+<link rel="preload" as="image" href="assets/img/mascota.webp">
 <link rel="preload" as="image" href="assets/img/portada.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LocalBusiness","name":"El Quillay de Pirque","description":"Arriendo de piscina y terraza equipada en Pirque para hasta 20 personas: tardes en familia, bautismos y cumpleaños.","image":"https://karendigital.github.io/quillay/assets/img/portada.jpg","url":"https://karendigital.github.io/quillay/","telephone":"+56993979291","priceRange":"$8.000 por persona","address":{"@type":"PostalAddress","addressLocality":"Pirque","addressRegion":"Región Metropolitana","addressCountry":"CL"},"openingHours":"Mo-Su 10:00-20:00","sameAs":["https://www.instagram.com/elquillaydepirque/"]}
 </script>
-<script>document.documentElement.className='js'</script>
+<script>(function(d){var c='js',v=false;try{v=sessionStorage.getItem('quillayIntro')==='1'}catch(e){}
+if(v||(window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches))c+=' sin-intro';else c+=' intro-on';d.className=c})(document.documentElement)</script>
 <style>
 /* ========== VARIABLES: cambia aquí colores y tipografías ========== */
 :root{
@@ -256,6 +262,42 @@ footer li svg{width:18px;height:18px}
 .js [data-ap=zoom]{transform:scale(.6)}
 .js [data-ap].visto{opacity:1;transform:none}
 
+/* ========== MASCOTA EN LA MARCA ========== */
+.marca-ico{display:inline-block;flex:none}
+.marca-ico img{width:42px;height:auto;transform-origin:50% 100%;animation:mece 4s ease-in-out infinite;filter:drop-shadow(0 3px 4px rgba(31,74,44,.25))}
+@media (max-width:560px){.marca-ico img{width:34px}}
+.pie-logo{width:120px;border-radius:20px;border:4px solid rgba(255,255,255,.9);margin:.4rem 0 1rem;box-shadow:0 14px 30px -14px rgba(0,0,0,.6);transform:rotate(-3deg)}
+
+/* ========== INTRO: EL QUILLAY SALUDA ========== */
+#intro{display:none}
+.js #intro{position:fixed;inset:0;z-index:300;display:grid;place-items:center;overflow:hidden;
+  background:radial-gradient(120% 90% at 50% 30%,#f3fbfb 0%,#cdeff8 45%,#a6dff0 100%);
+  animation:introSeguro .6s ease 8s forwards}
+.sin-intro #intro{display:none!important}
+.intro-on body{overflow:hidden;animation:desbloquea 0s linear 8s forwards}
+@keyframes desbloquea{to{overflow:visible}}
+.intro-on .hero [data-ap]{opacity:0!important;transform:translateY(40px)!important}
+.intro-on .pal,.intro-on .marca-h{animation-play-state:paused}
+@keyframes introSeguro{to{opacity:0;visibility:hidden}}
+.intro-sol{position:absolute;top:8%;right:10%;width:clamp(80px,14vw,150px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff1bd,var(--sol));box-shadow:0 0 80px 30px rgba(255,201,77,.45)}
+.intro-escena{position:relative;width:min(74vw,400px);display:flex;flex-direction:column;align-items:center}
+.intro-arbol{position:relative;width:100%;aspect-ratio:640/605;transform-origin:50% 100%;will-change:transform}
+.intro-arbol img{width:100%;height:100%;display:block;filter:drop-shadow(0 18px 18px rgba(31,74,44,.25))}
+.parpado{position:absolute;border-radius:50%;background:radial-gradient(circle at 50% 30%,#d29b52,#a9712f);transform:scaleY(0);transform-origin:50% 0}
+.parpado.izq{left:39.4%;top:55.2%;width:7.4%;height:9.4%}
+.parpado.der{left:53.4%;top:54.6%;width:7.4%;height:9.4%}
+.intro-globo{position:absolute;top:2%;right:-8%;background:#fff;color:var(--verde-osc);font-family:var(--titulo);font-weight:800;font-size:clamp(1rem,3.6vw,1.3rem);line-height:1.15;padding:.7rem 1.1rem;border-radius:22px;box-shadow:0 16px 30px -14px rgba(31,74,44,.55);transform:scale(0);transform-origin:10% 100%;white-space:nowrap}
+.intro-globo small{display:block;font-size:.72em;color:var(--coral)}
+.intro-globo::after{content:"";position:absolute;left:22px;bottom:-10px;border:12px solid transparent;border-top-color:#fff;border-bottom:0}
+.intro-globo .mano{display:inline-block;transform-origin:70% 80%}
+.intro-pasto{width:118%;height:34px;margin-top:-22px;border-radius:50%;background:radial-gradient(ellipse at 50% 30%,#9ad66f,#5fae4a);box-shadow:0 14px 24px -12px rgba(31,74,44,.45)}
+.intro-letrero{margin-top:1.1rem;background:linear-gradient(180deg,#a8703f,#7b4a25);border:3px solid #5d3818;border-radius:16px;padding:.5rem 1.6rem .6rem;text-align:center;color:#fff3d6;box-shadow:0 14px 26px -12px rgba(60,30,10,.6);transform:rotate(-2deg)}
+.intro-letrero strong{display:block;font-family:"Lobster",var(--titulo);font-weight:400;font-size:clamp(2rem,8vw,2.9rem);line-height:1.05;text-shadow:0 2px 0 #5d3818}
+.intro-letrero span{display:block;font-family:var(--titulo);font-weight:800;letter-spacing:.2em;font-size:.8rem}
+.intro-saltar{position:absolute;right:18px;bottom:18px;border:0;border-radius:999px;padding:.55rem 1rem;background:rgba(255,255,255,.85);color:var(--verde-osc);font-family:var(--titulo);font-weight:800;cursor:pointer}
+.hoja-intro{position:absolute;left:50%;top:38%;width:16px;height:10px;border-radius:0 100% 0 100%;pointer-events:none}
+@media (max-width:560px){.intro-globo{right:-2%;top:-6%}}
+
 /* ========== RECORRIDO (galería horizontal) ========== */
 .recorrido{background:var(--verde-osc);overflow:hidden}
 .recorrido h2{color:#fff}
@@ -356,6 +398,20 @@ html.lenis,html.lenis body{height:auto}
 </head>
 <body>
 
+<div id="intro" aria-hidden="true">
+  <div class="intro-sol"></div>
+  <div class="intro-escena">
+    <div class="intro-arbol">
+      <img src="assets/img/mascota.webp" alt="" width="640" height="605">
+      <i class="parpado izq"></i><i class="parpado der"></i>
+      <div class="intro-globo"><span class="mano">👋</span> ¡Hola!<small>Bienvenidos</small></div>
+    </div>
+    <div class="intro-pasto"></div>
+    <div class="intro-letrero"><strong>El Quillay</strong><span>— DE PIRQUE —</span></div>
+  </div>
+  <button class="intro-saltar" type="button">Saltar</button>
+</div>
+
 <div id="progreso" aria-hidden="true"></div>
 <canvas id="confeti" aria-hidden="true"></canvas>
 
@@ -366,7 +422,7 @@ html.lenis,html.lenis body{height:auto}
 <header class="nav">
   <div class="contenedor nav-int">
     <a href="#inicio" class="marca" aria-label="El Quillay de Pirque, inicio">
-      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 29V15"/><path d="M16 15c-6 0-9-4-9-9 6 0 9 4 9 9z"/><path d="M16 19c5 0 9-3 9-9-5 0-9 3-9 9z"/><path d="M10 29h12"/></svg>
+      <span class="marca-ico"><img src="assets/img/mascota-mini.png" alt="" width="42" height="40"></span>
       El Quillay de Pirque
     </a>
     <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
@@ -404,7 +460,7 @@ html.lenis,html.lenis body{height:auto}
         <span class="pal">¡Piscina,</span> <span class="pal">risas</span> <span class="pal">y</span> <span class="pal">celebraciones</span> <span class="pal">en</span>
         <span class="marca-h"><span class="pal">El</span> <span class="pal">Quillay</span> <span class="pal">de</span> <span class="pal">Pirque!</span></span>
       </h1>
-      <p class="sub" data-ap="arriba" style="--r:700ms">Piscina y terraza equipada en un espacio privado para hasta 20 personas. Un ambiente familiar para tardes en familia, bautismos y cumpleaños.</p>
+      <p class="sub" data-ap="arriba" style="--r:700ms">Piscina, piscina para los peques y terraza full equipada en un espacio privado para hasta 20 personas. Un ambiente familiar para tardes en familia, bautismos y cumpleaños.</p>
       <div class="acciones" data-ap="arriba" style="--r:850ms">
         <a class="btn btn-verde iman" data-confeti href="https://wa.me/56993979291?text=Hola%2C%20quiero%20consultar%20disponibilidad%20en%20El%20Quillay%20de%20Pirque%20%F0%9F%8C%9E" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.2A8.5 8.5 0 1 1 21 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"/></svg>
@@ -415,6 +471,7 @@ html.lenis,html.lenis body{height:auto}
       <div class="datos" data-ap="arriba" style="--r:1000ms">
         <span class="dato" style="--n:0">👨‍👩‍👧‍👦 Hasta 20 personas</span>
         <span class="dato" style="--n:1">🏊 Piscina</span>
+        <span class="dato" style="--n:5">🧒 Piscina para peques</span>
         <span class="dato" style="--n:2">🌿 Terraza equipada</span>
         <span class="dato" style="--n:3">💲 $8.000 por persona</span>
         <span class="dato" style="--n:4">🕐 10:00 a 20:00 h</span>
@@ -465,7 +522,9 @@ html.lenis,html.lenis body{height:auto}
       </div>
       <div class="rasgos escalera">
         <div class="rasgo" data-ap="arriba"><div class="emoji">🏊</div><h3>Piscina</h3><p>Para refrescarse y jugar todo el día.</p></div>
-        <div class="rasgo" data-ap="arriba"><div class="emoji">⛱️</div><h3>Terraza equipada</h3><p>Cómoda y con sombra para compartir la mesa.</p></div>
+        <div class="rasgo" data-ap="arriba"><div class="emoji">🧒</div><h3>Piscina para los peques</h3><p>Una piscina chica y segura para que los niños jueguen.</p></div>
+        <div class="rasgo" data-ap="arriba"><div class="emoji">⛱️</div><h3>Terraza full equipada</h3><p>Cocina, parrilla y vajilla completa para todo el grupo.</p></div>
+        <div class="rasgo" data-ap="arriba"><div class="emoji">🚻</div><h3>Baño</h3><p>Limpio, cómodo y a pasos de la terraza.</p></div>
         <div class="rasgo" data-ap="arriba"><div class="emoji">🌳</div><h3>Áreas de descanso</h3><p>Rincones al aire libre para relajarse y conversar.</p></div>
         <div class="rasgo" data-ap="arriba"><div class="emoji">💛</div><h3>Ambiente acogedor</h3><p>Familiar, tranquilo y solo para tus invitados.</p></div>
       </div>
@@ -481,7 +540,7 @@ html.lenis,html.lenis body{height:auto}
       <div>
         <span class="etiqueta">Recorrido</span>
         <h2>Date una vuelta por El Quillay</h2>
-        <p>Así es el espacio que será solo para tu grupo: piscina, terraza, comedor y cocina equipada.</p>
+        <p>Así es el espacio que será solo para tu grupo: piscinas, terraza full equipada, comedor, cocina y baño.</p>
         <span class="rec-pista-tip">Desliza para ver más →</span>
       </div>
       <div class="rec-barra" aria-hidden="true"><i></i></div>
@@ -489,14 +548,19 @@ html.lenis,html.lenis body{height:auto}
     <div class="rec-pista ampliable">
       <figure class="rec-item"><img loading="lazy" decoding="async" src="assets/img/portada.jpg" alt="Terraza con parrilla y vista a la piscina"><figcaption><small>01</small>Terraza con vista a la piscina</figcaption></figure>
       <figure class="rec-item"><img loading="lazy" decoding="async" src="assets/img/piscina-noche.jpg" alt="Piscina iluminada"><figcaption><small>02</small>Piscina iluminada</figcaption></figure>
-      <figure class="rec-item ancho"><img loading="lazy" decoding="async" src="assets/img/terraza-techada.jpg" alt="Espacio bajo techo con comedor y cocina"><figcaption><small>03</small>Espacio bajo techo</figcaption></figure>
-      <figure class="rec-item"><img loading="lazy" decoding="async" src="assets/img/mesa-larga.jpg" alt="Mesa larga de madera para todo el grupo"><figcaption><small>04</small>Comedor para todo el grupo</figcaption></figure>
-      <figure class="rec-item"><img loading="lazy" decoding="async" src="assets/img/parrilla-deck.jpg" alt="Deck de madera con parrilla y mesa alta"><figcaption><small>05</small>Deck con parrilla</figcaption></figure>
-      <figure class="rec-item"><img loading="lazy" decoding="async" src="assets/img/mesa-familia.jpg" alt="Mesa al aire libre con mantel"><figcaption><small>06</small>Mesa al aire libre</figcaption></figure>
-      <figure class="rec-item ancho"><img loading="lazy" decoding="async" src="assets/img/piscina.jpg" alt="Piscina con luces de guirnalda"><figcaption><small>07</small>Piscina con luces</figcaption></figure>
-      <figure class="rec-item"><img loading="lazy" decoding="async" src="assets/img/cocina.jpg" alt="Cocina exterior con encimera a gas y horno"><figcaption><small>08</small>Cocina equipada</figcaption></figure>
-      <figure class="rec-item"><img loading="lazy" decoding="async" src="assets/img/lavaplatos.jpg" alt="Lavaloza exterior de madera"><figcaption><small>09</small>Lavaloza exterior</figcaption></figure>
-      <figure class="rec-item"><img loading="lazy" decoding="async" src="assets/img/utensilios.jpg" alt="Vajilla, hervidor y microondas"><figcaption><small>10</small>Vajilla y utensilios</figcaption></figure>
+      <figure class="rec-item"><img loading="lazy" decoding="async" src="assets/img/piscina-peques.jpg" alt="Piscina para los peques"><figcaption><small>03</small>Piscina para los peques</figcaption></figure>
+      <figure class="rec-item ancho"><img loading="lazy" decoding="async" src="assets/img/terraza-techada.jpg" alt="Espacio bajo techo con comedor y cocina"><figcaption><small>04</small>Espacio bajo techo</figcaption></figure>
+      <figure class="rec-item"><img loading="lazy" decoding="async" src="assets/img/mesa-larga.jpg" alt="Mesa larga de madera para todo el grupo"><figcaption><small>05</small>Comedor para todo el grupo</figcaption></figure>
+      <figure class="rec-item"><img loading="lazy" decoding="async" src="assets/img/parrilla-deck.jpg" alt="Deck de madera con parrilla y mesa alta"><figcaption><small>06</small>Deck con parrilla</figcaption></figure>
+      <figure class="rec-item"><img loading="lazy" decoding="async" src="assets/img/mesa-familia.jpg" alt="Mesa al aire libre con mantel"><figcaption><small>07</small>Mesa al aire libre</figcaption></figure>
+      <figure class="rec-item ancho"><img loading="lazy" decoding="async" src="assets/img/piscina.jpg" alt="Piscina con luces de guirnalda"><figcaption><small>08</small>Piscina con luces</figcaption></figure>
+      <figure class="rec-item"><img loading="lazy" decoding="async" src="assets/img/cocina.jpg" alt="Cocina exterior con encimera a gas y horno"><figcaption><small>09</small>Cocina equipada</figcaption></figure>
+      <figure class="rec-item"><img loading="lazy" decoding="async" src="assets/img/loza-vasos.jpg" alt="Vasos, tazas, pocillos y hervidor"><figcaption><small>10</small>Vasos y tazas</figcaption></figure>
+      <figure class="rec-item"><img loading="lazy" decoding="async" src="assets/img/loza-platos.jpg" alt="Platos, cubiertos y jarros"><figcaption><small>11</small>Platos y cubiertos</figcaption></figure>
+      <figure class="rec-item"><img loading="lazy" decoding="async" src="assets/img/utensilios.jpg" alt="Microondas, hervidor y utensilios"><figcaption><small>12</small>Microondas y utensilios</figcaption></figure>
+      <figure class="rec-item"><img loading="lazy" decoding="async" src="assets/img/lavaplatos.jpg" alt="Lavaloza exterior de madera"><figcaption><small>13</small>Lavaloza exterior</figcaption></figure>
+      <figure class="rec-item"><img loading="lazy" decoding="async" src="assets/img/bano.jpg" alt="Baño con WC y ventana"><figcaption><small>14</small>Baño</figcaption></figure>
+      <figure class="rec-item"><img loading="lazy" decoding="async" src="assets/img/bano-2.jpg" alt="Lavamanos con mueble de madera"><figcaption><small>15</small>Lavamanos</figcaption></figure>
     </div>
   </div>
   <div class="olas" aria-hidden="true" style="fill:var(--menta)"><svg class="ola t"><use href="#ola"/></svg><svg class="ola"><use href="#ola"/></svg></div>
@@ -514,7 +578,7 @@ html.lenis,html.lenis body{height:auto}
       <article data-ap="arriba">
         <div class="tilt">
           <div class="insignia">🏖️</div>
-          <div class="ph c" data-foto="Foto · familia"><img loading="lazy" decoding="async" src="assets/img/mesa-familia.jpg" alt="Mesa al aire libre con mantel y sillas para compartir en familia"></div>
+          <div class="ph c" data-foto="Foto · familia"><img loading="lazy" decoding="async" src="assets/img/piscina-peques.jpg" alt="Piscina para los peques sobre el pasto" style="object-position:50% 62%"></div>
           <div class="tarjeta-txt">
             <h3>Paseos y tardes en familia</h3>
             <p>Un día de piscina, sobremesa larga y niños jugando al aire libre, sin apuros y sin compartir el espacio con nadie más.</p>
@@ -560,7 +624,10 @@ html.lenis,html.lenis body{height:auto}
       <ul class="lista escalera">
         <li data-ap="izq"><div class="emoji">👨‍👩‍👧‍👦</div><div><strong>Capacidad máxima: 20 personas</strong><span>Para grupos pequeños y celebraciones íntimas.</span></div></li>
         <li data-ap="izq"><div class="emoji">🏊</div><div><strong>Piscina</strong><span>Disponible para tu grupo durante la jornada.</span></div></li>
-        <li data-ap="izq"><div class="emoji">⛱️</div><div><strong>Terraza equipada</strong><span>Con sombra para comer, compartir y descansar.</span></div></li>
+        <li data-ap="izq"><div class="emoji">🧒</div><div><strong>Piscina para los peques</strong><span>Para que los más chicos también disfruten del agua.</span></div></li>
+        <li data-ap="izq"><div class="emoji">⛱️</div><div><strong>Terraza full equipada</strong><span>Con sombra para comer, compartir y descansar.</span></div></li>
+        <li data-ap="izq"><div class="emoji">🍽️</div><div><strong>Cocina y vajilla completa</strong><span>Platos, vasos, tazas, cubiertos, jarros, hervidor y microondas.</span></div></li>
+        <li data-ap="izq"><div class="emoji">🚻</div><div><strong>Baño</strong><span>Para tus invitados durante toda la jornada.</span></div></li>
         <li data-ap="izq"><div class="emoji">🔒</div><div><strong>Privacidad</strong><span>Arriendo exclusivo: solo para tus invitados.</span></div></li>
         <li data-ap="izq"><div class="emoji">📍</div><div><strong>Ubicación en Pirque</strong><span>Entorno natural en la Región Metropolitana.</span></div></li>
         <li data-ap="izq"><div class="emoji">🕐</div><div><strong>Horario: 10:00 a 20:00 h</strong><span>Toda la jornada para tu grupo.</span></div></li>
@@ -604,9 +671,13 @@ html.lenis,html.lenis body{height:auto}
     <p class="aviso" data-ap="zoom">🎄 Días festivos (Navidad y Año Nuevo): consultar valores y horarios.<em>Escríbenos por WhatsApp y te contamos las condiciones de esas fechas.</em></p>
     <div class="galeria escalera ampliable">
       <div class="ph" data-ap="zoom" data-foto="Foto · cocina"><img loading="lazy" decoding="async" src="assets/img/cocina.jpg" alt="Cocina exterior con encimera a gas y horno"></div>
-      <div class="ph b" data-ap="zoom" data-foto="Foto · lavaplatos"><img loading="lazy" decoding="async" src="assets/img/lavaplatos.jpg" alt="Lavaplatos exterior de madera junto al deck"></div>
-      <div class="ph c" data-ap="zoom" data-foto="Foto · utensilios"><img loading="lazy" decoding="async" src="assets/img/utensilios.jpg" alt="Utensilios disponibles para los invitados"></div>
-      <div class="ph" data-ap="zoom" data-foto="Foto · comedor"><img loading="lazy" decoding="async" src="assets/img/terraza-techada.jpg" alt="Comedor techado con mesa para todo el grupo"></div>
+      <div class="ph b" data-ap="zoom" data-foto="Foto · vasos"><img loading="lazy" decoding="async" src="assets/img/loza-vasos.jpg" alt="Vasos, tazas, pocillos y hervidor de la terraza"></div>
+      <div class="ph c" data-ap="zoom" data-foto="Foto · platos"><img loading="lazy" decoding="async" src="assets/img/loza-platos.jpg" alt="Platos, cubiertos y jarros para todo el grupo"></div>
+      <div class="ph" data-ap="zoom" data-foto="Foto · utensilios"><img loading="lazy" decoding="async" src="assets/img/utensilios.jpg" alt="Microondas, hervidor y utensilios para los invitados"></div>
+      <div class="ph b" data-ap="zoom" data-foto="Foto · lavaloza"><img loading="lazy" decoding="async" src="assets/img/lavaplatos.jpg" alt="Lavaloza exterior de madera junto al deck"></div>
+      <div class="ph c" data-ap="zoom" data-foto="Foto · baño"><img loading="lazy" decoding="async" src="assets/img/bano.jpg" alt="Baño con WC y ventana"></div>
+      <div class="ph" data-ap="zoom" data-foto="Foto · lavamanos"><img loading="lazy" decoding="async" src="assets/img/bano-2.jpg" alt="Lavamanos con mueble de madera en el baño"></div>
+      <div class="ph b" data-ap="zoom" data-foto="Foto · comedor"><img loading="lazy" decoding="async" src="assets/img/terraza-techada.jpg" alt="Comedor techado con mesa para todo el grupo"></div>
     </div>
   </div>
 </section>
@@ -649,9 +720,10 @@ html.lenis,html.lenis body{height:auto}
     <div class="pie">
       <div>
         <a href="#inicio" class="marca">
-          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 29V15"/><path d="M16 15c-6 0-9-4-9-9 6 0 9 4 9 9z"/><path d="M16 19c5 0 9-3 9-9-5 0-9 3-9 9z"/><path d="M10 29h12"/></svg>
+          <span class="marca-ico"><img src="assets/img/mascota-mini.png" alt="" width="42" height="40"></span>
           El Quillay de Pirque
         </a>
+        <img class="pie-logo" src="assets/img/logo.jpg" alt="Logo de El Quillay de Pirque" loading="lazy" width="120" height="180">
         <p>Piscina y terraza equipada en Pirque para disfrutar en familia y celebrar con hasta 20 personas.</p>
       </div>
       <div>
@@ -841,8 +913,17 @@ html.lenis,html.lenis body{height:auto}
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
 <script>
 (function(){
-  if(!window.gsap||!window.ScrollTrigger)return;
-  if(window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  var raiz=document.documentElement,intro=document.getElementById('intro');
+  function cierraIntro(){
+    if(intro&&intro.parentNode)intro.parentNode.removeChild(intro);
+    raiz.classList.remove('intro-on');raiz.classList.add('sin-intro');
+    try{sessionStorage.setItem('quillayIntro','1')}catch(e){}
+    if(window.__lenis)window.__lenis.start();
+    if(window.ScrollTrigger)ScrollTrigger.refresh();
+  }
+  window.__cierraIntro=cierraIntro;
+  if(!window.gsap||!window.ScrollTrigger){cierraIntro();return}
+  if(window.matchMedia('(prefers-reduced-motion:reduce)').matches){cierraIntro();return}
   gsap.registerPlugin(ScrollTrigger);
   if(window.SplitText)gsap.registerPlugin(SplitText);
   var $=function(s,c){return (c||document).querySelector(s)};
@@ -923,6 +1004,51 @@ html.lenis,html.lenis body{height:auto}
   });
 
   window.addEventListener('load',function(){ScrollTrigger.refresh()});
+
+  /* 8. Intro: El Quillay saluda, se achica y vuela al logo del menú */
+  if(intro&&raiz.classList.contains('intro-on')){
+    if(window.__lenis)window.__lenis.stop();
+    var arbol=intro.querySelector('.intro-arbol'),escena=intro.querySelector('.intro-escena');
+    var destino=document.querySelector('.nav .marca-ico');
+    var colores=['#7cc35a','#a6d64a','#e6e14a','#4c9c5f','#ffc94d'];
+    function hojas(){
+      var r=arbol.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height*.35;
+      for(var i=0;i<22;i++){var h=document.createElement('i');h.className='hoja-intro';
+        h.style.background=colores[i%colores.length];h.style.left=cx+'px';h.style.top=cy+'px';intro.appendChild(h);
+        var a=Math.random()*Math.PI*2,d=120+Math.random()*Math.min(window.innerWidth*.45,420);
+        gsap.fromTo(h,{x:0,y:0,scale:0,rotate:0},{x:Math.cos(a)*d,y:Math.sin(a)*d*.7+120,scale:1+Math.random(),rotate:(Math.random()-.5)*720,
+          duration:1.6+Math.random()*.8,ease:'power2.out',onComplete:function(){this.targets()[0].remove()}});
+        gsap.to(h,{opacity:0,duration:.6,delay:1.2+Math.random()*.6});}
+    }
+    var tl=gsap.timeline({defaults:{ease:'power3.out'},onComplete:fin});
+    tl.from('.intro-sol',{scale:0,opacity:0,duration:.8,ease:'back.out(2)'})
+      .from('.intro-pasto',{scaleX:0,duration:.5},'<.1')
+      .from(arbol,{scaleY:0,scaleX:.5,duration:1.1,ease:'elastic.out(1,.5)'},'-=.25')
+      .add(hojas,'-=.75')
+      .from('.intro-letrero',{y:70,opacity:0,rotate:-10,duration:.8,ease:'back.out(2.2)'},'-=.75')
+      .to('.intro-globo',{scale:1,duration:.55,ease:'back.out(3)'},'-=.35')
+      .to(arbol,{keyframes:{rotate:[0,-6,6,-4,3,0],scaleY:[1,1.03,.98,1.02,1,1],ease:'sine.inOut'},duration:1.5},'<')
+      .to('.intro-globo .mano',{keyframes:{rotate:[0,22,-12,22,-8,0]},duration:1.2,ease:'sine.inOut'},'<.1')
+      .to('.parpado',{scaleY:1,duration:.07,yoyo:true,repeat:1,ease:'none'},'-=.55')
+      .addLabel('salida','+=.2')
+      .to('.intro-globo,.intro-letrero,.intro-saltar,.intro-sol',{opacity:0,y:-12,duration:.35,ease:'power2.in'},'salida')
+      .add(function(){
+        var r=arbol.getBoundingClientRect(),d=destino?destino.getBoundingClientRect():{left:24,top:24,width:42,height:40};
+        var esc=d.width/r.width,bx=r.left+r.width/2,by=r.bottom,nx=d.left+d.width/2,ny=d.top+d.height/2;
+        gsap.to(arbol,{x:nx-bx,y:ny-(by-esc*r.height/2),scale:esc,rotate:-8,duration:1,ease:'power3.inOut'});
+        gsap.to('.intro-pasto',{scaleX:0,opacity:0,duration:.5});
+        gsap.fromTo(intro,{clipPath:'circle(150% at '+nx+'px '+ny+'px)'},{clipPath:'circle(0% at '+nx+'px '+ny+'px)',duration:1.05,ease:'power3.inOut',delay:.1});
+      },'salida')
+      .to({},{duration:1.2});
+    function fin(){
+      cierraIntro();
+      if(destino)gsap.fromTo(destino,{scale:.4,rotate:-20},{scale:1,rotate:0,duration:1.1,ease:'elastic.out(1,.4)'});
+    }
+    function saltar(){if(tl.time()<tl.labels.salida-.05){tl.seek(tl.labels.salida-.02);tl.play()}}
+    intro.querySelector('.intro-saltar').addEventListener('click',saltar);
+    intro.addEventListener('click',function(e){if(!e.target.closest('.intro-saltar'))saltar()});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&intro.parentNode)saltar()});
+  }
 })();
 </script>
 </body>

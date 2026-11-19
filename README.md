@@ -20,4 +20,8 @@ Reemplaza el archivo en `assets/img/` manteniendo el mismo nombre
 | mesa-familia.jpg | Ocasiones · familia |
 | mesa-larga.jpg | Ocasiones · bautismos |
 | piscina.jpg | Ocasiones · cumpleaños |
-| cocina.jpg, lavaplatos.jpg, utensilios.jpg | Galería en Valores |
+| piscina-peques.jpg | Ocasiones · familia y recorrido |
+| cocina.jpg, loza-vasos.jpg, loza-platos.jpg, utensilios.jpg, lavaplatos.jpg, bano.jpg, bano-2.jpg | Galería en Valores y recorrido |
+| logo.jpg | Pie de página |
+| mascota.webp | Animación de bienvenida (el Quillay que saluda) |
+| mascota-mini.png | Logo del menú e ícono de la pestaña |
